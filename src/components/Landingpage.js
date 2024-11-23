@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Main = styled.div`
   position: relative;
@@ -115,7 +116,7 @@ const Buttons = styled.div`
   margin-top: 40px;
 `;
 
-const Button1 = styled.div`
+const Button1 = styled(Link)`
   background: #f58634;
   width: 160px;
   height: 60px;
@@ -126,6 +127,7 @@ const Button1 = styled.div`
   color: white;
   cursor: pointer;
   border-radius: 4px;
+  text-decoration: none;
 `;
 
 const Button2 = styled.div`
@@ -176,7 +178,7 @@ const Landingpage = () => {
               prices go. It's simple
             </Sub>
             <Buttons>
-              <Button1>Register</Button1>
+              <Button1 to="/register">Register</Button1>
               <Button2>Sponsor</Button2>
             </Buttons>
           </Wrapper2>
